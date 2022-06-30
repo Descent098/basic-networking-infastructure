@@ -1,50 +1,48 @@
-# ezprez template
+# Basic Networking & Infastructure
 
-*A repo to bootstrap ezprez usage*
+Everything you need to know to understand the steps from you typing a URL in your browser to seeing a webpage.
 
-This demo assumes you are:
-1. Using GitHub
-2. Using GitHub pages for deployment (see [FAQ](#faq) for setting up other deployment options)
+## Prerequisites
 
-## Setup
+- [Basic understanding of HTML/CSS/JS][https://kieranwood.ca/basic-web-technologies]
 
-1. Click on "Use this template" on the [GitHub Repo](https://github.com/QU-UP/ezprez)
-2. On the new repository page **MAKE SURE YOU CHECK OFF** "Include all branches"
-3. Follow the steps in [usage](#usage) to begin creating your presentation locally
+## Recommended pre-requisites
 
-## Usage
+- [Basic terminal usage](https://kieranwood.ca/terminal-basics)
 
-Here are the steps for doing local development:
+## Topics covered
 
-1. Install dependencies by running ```pip install ezprez``` or ```sudo pip3 install ezprez```
-2. Read the usage documentation for [ezprez](https://ezprez.readthedocs.io)
-3. Fill out ```example.py```; add in your ```Slide```'s and fill out TODO's
-4. Push your changes and the pipeline will auto-deploy to github pages
-
-## FAQ
-
-<details>
- <summary><strong><em>📊 How do I preview my presentation locally? 📊</em></strong></summary>
- </br>
- <em>To preview your presentation locally you need to:</em>
- <ol>
-    <li>Run python example.py or python3 example.py</li>
-    <li>Open <code>/Presentation/index.html</code> in a browser</li>
- </ol>
-</details>
-
-<details>
- <summary><strong><em>📷 How do I add in images? 📷</em></strong></summary>
- </br>
- <em>There are a few steps to use images in your presentation</em>
- <ol>
-    <li>Add your images to <code>/images</code></li>
-    <li>Use an <a href="https://ezprez.readthedocs.io/en/latest/components/#image" target="_blank">Image Component</a> that just has the filename i.e. if the image is called <code>kieran-wood-lp-ice-caps-4k-w-peng.jpg</code> in <code>/images</code> then you want to use <code>"kieran-wood-lp-ice-caps-4k-w-peng.jpg"</code> in the <a href="https://ezprez.readthedocs.io/en/latest/components/#image" target="_blank">Image Component</a></li>
- </ol>
-</details>
-
-<details>
- <summary><strong><em>💻 How do I use other hosting services? 💻</em></strong></summary>
- </br>
- <em>When you run example.py the static html is exported to <code>/Presentation</code> so you can just deploy those files to any static file host (<code>index.html</code> is the whole presentation)</em>
-</details>
+- Some basic terminology
+  - URL
+  - domain
+  - browser
+  - network
+- Structure of a web app
+  - Traditional view (Backend-->middlewear--> frontend (user visible))
+  - A more accurate view (Backend --> Middlewear --> Infastructure --> Frontend)
+- Terminology
+  - Browser
+  - Network
+  - Server/host vs client
+  - URL
+  - Slug
+  - TLD
+  - Protocol
+  - Domain 
+- Domain name Registrars
+- HTTP
+  - Headers
+  - Requests
+  - Responses
+- IP addresses/ports
+- Nameservers
+- DNS
+  - Records
+  - Common records
+- Putting it all together in one example
+- Extra stuff
+  - Subdomains
+  - HTTPS (SSL/TLS)
+  - CDN's
+  - Sockets
+  - CLI Tools
