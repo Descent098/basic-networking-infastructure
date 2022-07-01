@@ -27,7 +27,7 @@
         <meta property="og:type" content="article">
         <meta property="og:title" content="Basic Networking & Infastructure"> 
         <meta property="og:description" content="Everything you need to know to understand the steps from you typing a URL in your browser to seeing a webpage">
-        <meta property="og:updated_time" content="2022-06-30 05:47:07.352357">
+        <meta property="og:updated_time" content="2022-07-01 05:42:04.650104">
         <meta property="og:image" content="static/images/share-webslides.jpg">
 
         <!-- TWITTER -->
@@ -156,6 +156,7 @@
 				<div class='wrap fadeIn'>
 					<div class='content-center'>
 					<h2>What is a browser?</h2>
+					<p>A browser lets you connect to a server over a network and then visualizes the response it recieves back (HTML/CSS/JS, images, pdf's etc.)</p>
 
 					</div>
 				</div>
@@ -165,6 +166,7 @@
 				<div class='wrap fadeIn'>
 					<div class='content-center'>
 					<h2>What is a network?</h2>
+					<p>A network is a collection of computers that are connected together and can communicate with one another. Generally speaking the internet is a massive network of many computers connected together</p>
 
 					</div>
 				</div>
@@ -174,6 +176,9 @@
 				<div class='wrap fadeIn'>
 					<div class='content-center'>
 					<h2>What is a server/host vs client?</h2>
+					<p>The server or host is the computer that is SENDING responses to the client (i.e. when you go to google, the computer that gives you the page is the server and google is the host)</p>
+					<p>The client is whatever is RECIEVING the responses from the server (i.e. the person trying to access google and their browser)</p>
+					<p>Technically speaking both groups do both actions, but overall the goal of the client is to recieve from the server and overall the goal of the server is to send to the client</p>
 
 					</div>
 				</div>
@@ -183,6 +188,10 @@
 				<div class='wrap fadeIn'>
 					<div class='content-center'>
 					<h2>What is a URL?</h2>
+					<p>A URL is what you type in a browser to get a webpage, for example https://schulichignite.com/beginner it has multiple parts and follows the form:</p>
+					<pre><code class='language-'>https://schulichignite.com/beginner
+$Protocol://$domain.$tld/$slug</code></pre>
+					<p>*Anything in angle brackets or starting with a $ is a variable</p>
 
 					</div>
 				</div>
@@ -192,6 +201,8 @@
 				<div class='wrap fadeIn'>
 					<div class='content-center'>
 					<h2>What is a slug?</h2>
+					<p>The slug is the bit at the end, so in https://schulichignite.com/beginner the /beginner is the slug. This is used to specify what you are looking for on the server. One site can have many pages so a slug is how the server knows what to look for</p>
+					<p>Slugs used to just be file paths, so for example you would have https://schulichignite.com/beginner.html, which would just look for the beginner.html file</p>
 
 					</div>
 				</div>
