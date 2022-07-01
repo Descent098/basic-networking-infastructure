@@ -14,13 +14,13 @@ Slide("So how does infastructure work?", "For this presentation we don't care ab
 
 # Terminology TODO
 Slide("Let's start with some terms")
-Slide("What is a browser?") # TODO: Explain browsers are just a way to visualize communication between two servers and render the responses nicely
-Slide("What is a network?") # You need to be connected to the internet
-Slide("What is a server/host vs client?")
+Slide("What is a browser?", "A browser lets you connect to a server over a network and then visualizes the response it recieves back (HTML/CSS/JS, images, pdf's etc.)") 
+Slide("What is a network?", "A network is a collection of computers that are connected together and can communicate with one another. Generally speaking the internet is a massive network of many computers connected together") 
+Slide("What is a server/host vs client?", "The server or host is the computer that is SENDING responses to the client (i.e. when you go to google, the computer that gives you the page is the server and google is the host)", "The client is whatever is RECIEVING the responses from the server (i.e. the person trying to access google and their browser)", "Technically speaking both groups do both actions, but overall the goal of the client is to recieve from the server and overall the goal of the server is to send to the client")
 
 ## URL Explanations TODO
-Slide("What is a URL?") # <Protocol>://<domain>.<tld>/<slug> or <Protocol>://<subdomain>.<domain>.<tld>/<slug>
-Slide("What is a slug?")
+Slide("What is a URL?", "A URL is what you type in a browser to get a webpage, for example https://schulichignite.com/beginner it has multiple parts and follows the form:", Code("", "https://schulichignite.com/beginner\n$Protocol://$domain.$tld/$slug"), r"*Anything in angle brackets or starting with a $ is a variable")
+Slide("What is a slug?", "The slug is the bit at the end, so in https://schulichignite.com/beginner the /beginner is the slug. This is used to specify what you are looking for on the server. One site can have many pages so a slug is how the server knows what to look for", "Slugs used to just be file paths, so for example you would have https://schulichignite.com/beginner.html, which would just look for the beginner.html file")
 Slide("What is a tld?")
 Slide("What is a protocol?", "We'll come back to this in a bit")
 Slide("What is a domain?") #TODO: Explain FQDN
