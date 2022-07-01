@@ -27,7 +27,7 @@
         <meta property="og:type" content="article">
         <meta property="og:title" content="Basic Networking & Infastructure"> 
         <meta property="og:description" content="Everything you need to know to understand the steps from you typing a URL in your browser to seeing a webpage">
-        <meta property="og:updated_time" content="2022-07-01 05:42:04.650104">
+        <meta property="og:updated_time" content="2022-07-01 07:25:35.546996">
         <meta property="og:image" content="static/images/share-webslides.jpg">
 
         <!-- TWITTER -->
@@ -202,7 +202,7 @@ $Protocol://$domain.$tld/$slug</code></pre>
 					<div class='content-center'>
 					<h2>What is a slug?</h2>
 					<p>The slug is the bit at the end, so in https://schulichignite.com/beginner the /beginner is the slug. This is used to specify what you are looking for on the server. One site can have many pages so a slug is how the server knows what to look for</p>
-					<p>Slugs used to just be file paths, so for example you would have https://schulichignite.com/beginner.html, which would just look for the beginner.html file</p>
+					<p>Slugs used to just be file paths, so for example you would have https://schulichignite.com/beginner.html, which the server would just look for the beginner.html file and send it</p>
 
 					</div>
 				</div>
@@ -212,6 +212,7 @@ $Protocol://$domain.$tld/$slug</code></pre>
 				<div class='wrap fadeIn'>
 					<div class='content-center'>
 					<h2>What is a tld?</h2>
+					<p>The TLD (Top level domain) is the .com in https://schulichignite.com/beginner. The difference is that some TLD's have rules, for example .ca domains require you to provide your address and name, and the .io domain requires certain security standards etc.</p>
 
 					</div>
 				</div>
@@ -221,7 +222,7 @@ $Protocol://$domain.$tld/$slug</code></pre>
 				<div class='wrap fadeIn'>
 					<div class='content-center'>
 					<h2>What is a protocol?</h2>
-					<p>We'll come back to this in a bit</p>
+					<p>We'll come back to this in a bit, on the web this is basically always http:// or https://, if you're loading a file it will be file://$filepath</p>
 
 					</div>
 				</div>
@@ -231,6 +232,7 @@ $Protocol://$domain.$tld/$slug</code></pre>
 				<div class='wrap fadeIn'>
 					<div class='content-center'>
 					<h2>What is a domain?</h2>
+					<p>A domain is essentially a name you purchase. You buy a domain name (which includes A tld not all tld's), and that indicates you own it and can do what you want with it. For example schulichignite.com (this is also sometimes called a FQDN (fully qualified domain name)</p>
 
 					</div>
 				</div>
@@ -250,7 +252,7 @@ $Protocol://$domain.$tld/$slug</code></pre>
 				<div class='wrap fadeIn'>
 					<div class='content-center'>
 					<h2>Common Domain Name Registrars</h2>
-					<p>These are a dime a dozen but in Canada I would recommend either GoDaddy, webnames or namecheap</p>
+					<p>These are a dime a dozen but in Canada I would recommend either GoDaddy, webnames or namecheap (remember you have to renew your ownership or other people can take your domain)</p>
 
 					</div>
 				</div>
@@ -281,6 +283,7 @@ $Protocol://$domain.$tld/$slug</code></pre>
 					<div class='content-center'>
 					<h2>HTTP Diagram</h2>
 					<p>Imagine bobby wants to get the shulich ignite beginner sessions page (https://schulichignite.com/beginner)</p>
+<img src='./static/images/bobby-http.png' alt='bobby-http' >					<p>This whole interaction and how it works is defined by the HTTP protocol</p>
 
 					</div>
 				</div>
@@ -290,6 +293,7 @@ $Protocol://$domain.$tld/$slug</code></pre>
 				<div class='wrap fadeIn'>
 					<div class='content-center'>
 					<h2>HTTP Headers</h2>
+					<p>HTTP requests and responses both have headers. Headers are key-value pairs that tell the client & host the details they need to interact properly</p>
 
 					</div>
 				</div>
@@ -307,6 +311,7 @@ $Protocol://$domain.$tld/$slug</code></pre>
 								<li>The content of the letter</li>
 					</div>
 							</ul>
+					<p></p>
 					<p>That is what HTTP needs</p>
 					<div class='grid content-center'>
 							<ul style='text-align:justify;'>
@@ -315,6 +320,8 @@ $Protocol://$domain.$tld/$slug</code></pre>
 								<li>The Content (text, html, image etc.)</li>
 					</div>
 							</ul>
+					<p></p>
+					<p>Additionally like how you would add FRAGILE to mail to tell the post service how to handle your message, headers can also contain information about how to handle the request/response</p>
 
 					</div>
 				</div>
@@ -324,6 +331,29 @@ $Protocol://$domain.$tld/$slug</code></pre>
 				<div class='wrap fadeIn'>
 					<div class='content-center'>
 					<h2>How to examine headers in browser</h2>
+
+					</div>
+				</div>
+			</section>
+
+			<section class='bg-black-blue slide-center'>
+				<div class='wrap fadeIn'>
+					<div class='content-center'>
+					<h2>HTTP Requests</h2>
+					<p>The first part of HTTP communication is to request a URL</p>
+
+					</div>
+				</div>
+			</section>
+
+			<section class='bg-black-blue slide-center'>
+				<div class='wrap fadeIn'>
+					<div class='content-center'>
+					<h2>HTTP Request Example</h2>
+					<p>We're going to request https://schulichignite.com/beginner</p>
+					<pre><code class='language-'>GET /beginner HTTP/1.1
+Host: schulichignite.com
+User-Agent:... Removed for readability</code></pre>
 
 					</div>
 				</div>
@@ -383,16 +413,6 @@ $Protocol://$domain.$tld/$slug</code></pre>
 			<section class='bg-black-blue slide-center'>
 				<div class='wrap fadeIn'>
 					<div class='content-center'>
-					<h2>HTTP Request Example</h2>
-					<p>We're going to request https://schulichignite.com/beginner</p>
-
-					</div>
-				</div>
-			</section>
-
-			<section class='bg-black-blue slide-center'>
-				<div class='wrap fadeIn'>
-					<div class='content-center'>
 					<h2>Breaking down the headers</h2>
 					<p>This won't cover everything, just the things that are useful</p>
 
@@ -405,7 +425,7 @@ $Protocol://$domain.$tld/$slug</code></pre>
 					<div class='content-center'>
 					<h2>First line</h2>
 					<p>The first line tells the browser the request type, slug, protocol and version</p>
-					<pre><code class='language-bash'>GET /hello-world HTTP/1.1</code></pre>
+					<pre><code class='language-bash'>GET /beginner HTTP/1.1</code></pre>
 
 					</div>
 				</div>
@@ -427,7 +447,7 @@ $Protocol://$domain.$tld/$slug</code></pre>
 					<div class='content-center'>
 					<h2>User Agent</h2>
 					<p>This tells the server information about your browser. This is used by developers often to patch compatability if a browser doesn't support a feature (usually REALLY long)</p>
-					<pre><code class='language-'>User-Agent: &ampltbrowser user agent&ampgt </code></pre>
+					<pre><code class='language-'>User-Agent: Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.53 Mobile Safari/537.36 Edg/103.0.1264.37 </code></pre>
 
 					</div>
 				</div>
@@ -437,7 +457,14 @@ $Protocol://$domain.$tld/$slug</code></pre>
 				<div class='wrap fadeIn'>
 					<div class='content-center'>
 					<h2>HTTP Response</h2>
-					<p>The response is comprised of a header, and the response content (the HTML or file contents of the resource)</p>
+					<p>The response is comprised of a header, and the response content (the HTML or file contents of the resource) Example</p>
+<pre><code class="language-html hljs xml">HTTP/1.x 200 OK
+Content-Type: text/html; charset=UTF-8
+Cache-Control: max-age=3600, public
+Content-Encoding: gzip
+
+&lt;title&gt; Schulich Ignite &lt;/title&gt;&lt;!--More HTML here--&gt;
+</code></pre>
 
 					</div>
 				</div>
@@ -447,6 +474,11 @@ $Protocol://$domain.$tld/$slug</code></pre>
 				<div class='wrap fadeIn'>
 					<div class='content-center'>
 					<h2>HTTP Response header example</h2>
+					<p>Like requests the response headers provide additional details. Usually about the type of content being sent and other information</p>
+					<pre><code class='language-'>HTTP/1.x 200 OK
+Content-Type: text/html; charset=UTF-8
+Cache-Control: max-age=3600, public
+Content-Encoding: gzip</code></pre>
 
 					</div>
 				</div>
@@ -594,6 +626,8 @@ $Protocol://$domain.$tld/$slug</code></pre>
 					<h2>Public IP addresses and ports</h2>
 					<p>HTTP connects to the PUBLIC IP address and port of a computer, not the domain!</p>
 					<p>Let's say that a computer is like an apartment building. You can think of the IP address as the coordinates to the building (computer), and the port as which apartment to go to in the building (computer)</p>
+					<pre><code class='language-'>192.0. 2.146:80
+[2001:0db8:85a3:0000:0000:8a2e:0370:7334]:443</code></pre>
 
 					</div>
 				</div>
@@ -634,7 +668,7 @@ $Protocol://$domain.$tld/$slug</code></pre>
 					<div class='content-center'>
 					<h2>DNS is made up of records</h2>
 					<p>Your domain is used for lots of things, so DNS has lots of different types of records to handle those situations. You can think of records like a contact list. It lets you look up where to communicate with a server.</p>
-
+<img src='./static/images/kieranwood-dns.png' alt='kieranwood-dns' >
 					</div>
 				</div>
 			</section>
@@ -643,6 +677,9 @@ $Protocol://$domain.$tld/$slug</code></pre>
 				<div class='wrap fadeIn'>
 					<div class='content-center'>
 					<h2>Common DNS Record types</h2>
+					<p>Here are the most common DNS records you should know about. Please note the records are listed in the following format</p>
+					<pre><code class='language-'>$record_type $domain_name $content</code></pre>
+					<p>also keep in mind @ in place of domain name is self-referential (i.e. using @ for dns of schulichignite.com would be the same as typing schulichignite.com)</p>
 
 					</div>
 				</div>
@@ -651,7 +688,11 @@ $Protocol://$domain.$tld/$slug</code></pre>
 			<section class='bg-green slide-center'>
 				<div class='wrap fadeIn'>
 					<div class='content-center'>
-					<h2>Alias records</h2>
+					<h2>Alias records (A or AAAA)</h2>
+					<p>There are two types of alias records A or AAAA, these map a domain to an IP. A records for IPV4 adresses and AAAA for IPV6</p>
+					<p>These are the primary records used to tell the browser which server to look for to get a site</p>
+					<pre><code class='language-'>A @ 185.199.111.153
+AAAA @ 2001:0db8:85a3:0000:0000:8a2e:0370:7334</code></pre>
 
 					</div>
 				</div>
@@ -660,7 +701,9 @@ $Protocol://$domain.$tld/$slug</code></pre>
 			<section class='bg-green slide-center'>
 				<div class='wrap fadeIn'>
 					<div class='content-center'>
-					<h2>Canonical Name Records</h2>
+					<h2>Canonical Name Records (CNAME)</h2>
+					<p>These are used to set a domain to another domain. For example this would allow you to have www.schulichignite.com which maps to the same content as schulichignite.com, or spark.schulichignite.com map to the content of schulich-ignite.github.io</p>
+					<pre><code class='language-'>CNAME spark schulich-ignite.github.io</code></pre>
 
 					</div>
 				</div>
@@ -669,7 +712,9 @@ $Protocol://$domain.$tld/$slug</code></pre>
 			<section class='bg-green slide-center'>
 				<div class='wrap fadeIn'>
 					<div class='content-center'>
-					<h2>MX records</h2>
+					<h2>Mail Exchanger Record (MX)</h2>
+					<p>These are records used to setup a SMTP (email) server</p>
+					<pre><code class='language-'>MX shuclichignite.com mail.domain.com</code></pre>
 
 					</div>
 				</div>
@@ -679,6 +724,8 @@ $Protocol://$domain.$tld/$slug</code></pre>
 				<div class='wrap fadeIn'>
 					<div class='content-center'>
 					<h2>TXT Records</h2>
+					<p>These are just plain text, they are often used to verify to third party services (like google) that you own a domain</p>
+					<pre><code class='language-'>TXT @ $verification_code</code></pre>
 
 					</div>
 				</div>
@@ -688,6 +735,8 @@ $Protocol://$domain.$tld/$slug</code></pre>
 				<div class='wrap fadeIn'>
 					<div class='content-center'>
 					<h2>NS Records</h2>
+					<p>These records tell you which nameserver is used for a domain</p>
+					<pre><code class='language-'>NS @ $nameserver_domain</code></pre>
 
 					</div>
 				</div>
@@ -708,6 +757,9 @@ $Protocol://$domain.$tld/$slug</code></pre>
 				<div class='wrap fadeIn'>
 					<div class='content-center'>
 					<h2>DNS providors</h2>
+					<p>Sometimes your domain name registrar will provide DNS. It is usually better to go with a dedicated DNS, I highly recommend</p>
+
+					<a href=https://www.cloudflare.com/ target='_blank' rel='external' style='color:#eeeeeee;'>cloudflare</a>
 
 					</div>
 				</div>
@@ -949,6 +1001,17 @@ ping 8.8.8.8</code></pre>
 					<p>nc -l port</p>
 					<p>windows</p>
 					<pre><code class='language-bash'>telnet hostname port</code></pre>
+
+					</div>
+				</div>
+			</section>
+
+			<section class='bg-white slide-center'>
+				<div class='wrap fadeIn'>
+					<div class='content-center'>
+					<h2>A great channel for networking info</h2>
+
+					<a href=https://www.youtube.com/c/HusseinNasser-software-engineering target='_blank' rel='external' style='color:#4dd;'>Hussein Nasser</a>
 
 					</div>
 				</div>
